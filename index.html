@@ -10,30 +10,35 @@
   margin:auto;
   width:600px; 
   gap: 3px;
-  background-color: dodgerblue;
+  background-color: rgb(141, 198, 255);
   padding: 5px;
   text-align: center;
+  border-radius: 10%;
 }
 
 /* For the number keys */
 .mainKeys {
   display: inline-grid;
   grid-template-columns: 100px 100px 100px 100px 100px;
-  background-color: dodgerblue;
+  background-color: rgb(141, 198, 255);
   padding: 10px;
   gap: 20px;
+  border-radius: 25%;
 }
 
 .mainKeys div {
-  background-color: #f1f1f1;
+  background-color: rgb(141, 198, 255);
   border: 1px solid black;
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  border-radius: 25%;
+  font-family: sans-serif;
 }
 
 .mainKeys div:hover {
   cursor: pointer;
+  background-color: rgb(86, 171, 255);
 }
 
 /* For the main working display */
@@ -45,6 +50,8 @@
   padding: 5px;
   font-size: 50px;
   text-align: left;
+  border-radius: 5%;
+  font-family: sans-serif;
 }
 
 /* For the Memory store display */
@@ -52,6 +59,7 @@
   background-color: #f1f1f1;
   text-align: left;
   font-size: 30px;
+  font-family: sans-serif;
 }
 
 /* For the Calculator title */
@@ -90,16 +98,17 @@
 
 /* For the button at the bottom that brings up a dropdown box of colours */
 .dropbtn {
-  background-color: #3498DB;
+  background-color: #005d9b;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  font-family: sans-serif;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: #1b5175;
 }
 
 /* For the dropdown list of background Calculator colours */
@@ -111,10 +120,10 @@
 .dropdown-content {
   display:none;
   position: absolute;
-  background-color: #e2dfdf;
+  background-color: #00c3ff;
   min-width: 160px;
   overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 136, 255, 0.2);
   z-index: 1;
 }
 
@@ -125,7 +134,7 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {background-color: #0062ff;}
 
 .show {display: block;}
 </style>
