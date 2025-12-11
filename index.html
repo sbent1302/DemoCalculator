@@ -185,15 +185,16 @@ const calcArray = []; // Array used to store values entered on the display
 let memoryStore = 0;  // Temporary store for numbers to be used during calculations
 let currentMathType = ""; // Store for the current action i.e. add, multiply etc
 
-// This class contains calculator related methods 
+// This Javascript class contains calculator related methods and properties
 class Calc {
   constructor(calcColour){
-    // Colour of the Calculator
+    // Set default colour of the Calculator
     this._calcColour = calcColour;
     document.getElementById("calcContainer").style.backgroundColor = this._calcColour;
     document.getElementById("calcMainKeys").style.backgroundColor = this._calcColour
   }  
-  // Called to manage the display contents when deleting single number with C 
+  // Called to add selected number to the main display.
+  //  Also called to manage the display contents when deleting single number with C 
   //    or clearing all using AC
   calcDisplay(x){
       let displayContent = document.getElementById("disp").innerHTML;
@@ -219,7 +220,7 @@ class Calc {
       }
   }
 
-  // Set Calculator colour property
+  // Set Calculator colour property and change the background colour
   set cColour(cValue){
     this._calcColour = cValue;
     document.getElementById("calcContainer").style.backgroundColor = cValue;
@@ -236,7 +237,7 @@ class Calc {
       document.getElementById("calcColour").classList.toggle("show");
   }
 
-  // Add a number to the display. Pressing "." is adds a decimal point
+  // Add a number to the display. Pressing "." adds a decimal point
   numberPress(keyNo){
     let dispNo = document.getElementById("disp").innerHTML;
     dispNo=dispNo + keyNo;
@@ -289,10 +290,6 @@ class Calc {
       const num1 = parseFloat(calcArrayContents[0]);
       const num2 = parseFloat(calcArrayContents[1]);
       myResult = num1 - num2;
-    } else if(mathType=="EXP"){
-      const num1 = parseFloat(calcArrayContents[0]);
-      const num2 = parseFloat(calcArrayContents[1]);
-      myResult = Math.exp(num1,num2);
     }
     document.getElementById("disp").innerHTML = myResult;
     calcArrayContents.length=0;
@@ -315,10 +312,12 @@ function numberPress2(keyNo){
   myCalc.numberPress(keyNo);
 }
 
+// Action key pressed
 function actionPress2(keyAction){
   myCalc.actionPress(keyAction);
 }
 
+// Answwer key pressed
 function answerPress(){
   let dispNo = document.getElementById("disp").innerHTML;
   calcArray.push(dispNo);
@@ -329,6 +328,7 @@ function answerPress(){
 
 }
 
+// Used during debugging
 function test(info){
   document.getElementById("test").innerHTML=info;
 }
