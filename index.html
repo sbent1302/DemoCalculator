@@ -9,18 +9,18 @@
 /* For the Calculator title etc apart from the keys */
 .container {
   margin:auto;
-  width:600px; 
+  width:300px; 
   gap: 3px;
   background-color: rgb(141, 198, 255);
   padding: 5px;
   text-align: center;
-  border-radius: 10%;
+  border-radius: 5%;
 }
 
 /* For the number keys */
 .mainKeys {
   display: inline-grid;
-  grid-template-columns: 100px 100px 100px 100px 100px;
+  grid-template-columns: auto auto auto auto auto;
   background-color: rgb(141, 198, 255);
   padding: 10px;
   gap: 20px;
@@ -30,8 +30,8 @@
 .mainKeys div {
   background-color: rgb(141, 198, 255);
   border: 1px solid black;
-  padding: 20px;
-  font-size: 30px;
+  padding: 10px;
+  font-size: 15px;
   text-align: center;
   border-radius: 25%;
   font-family: sans-serif;
@@ -46,10 +46,10 @@
 .display {
   display: block;
   background-color: #f1f1f1;
-  grid-template-columns: 540px;
+  grid-template-columns: auto;
   border: 10px solid blue;
   padding: 5px;
-  font-size: 50px;
+  font-size: 15px;
   text-align: left;
   border-radius: 5%;
   font-family: sans-serif;
@@ -59,13 +59,13 @@
 .memory {
   background-color: #f1f1f1;
   text-align: left;
-  font-size: 30px;
+  font-size: 15px;
   font-family: sans-serif;
 }
 
 /* For the Calculator title */
 .title {
-  font-size: 40px;
+  font-size: 30px;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color:black;
   text-align: center;
@@ -82,7 +82,7 @@
 
 .tooltiptext {
   visibility: hidden;
-  font-size: 25px;
+  font-size: 15px;
   width: 130px;
   background-color: lightblue;
   color: black;
@@ -122,7 +122,7 @@
   display:none;
   position: absolute;
   background-color: #00c3ff;
-  min-width: 160px;
+  min-width: 100px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0, 136, 255, 0.2);
   z-index: 1;
@@ -139,16 +139,6 @@
 
 .show {display: block;}
 
-@media only screen and (max-width:600px) {
-  .container {
-    width: 100%;
-  }
-  .mainKeys {
-    grid-template-columns: repeat(5, 1fr);
-    padding: 10px;
-    font-size: 20px;
-  }
-}
 </style>
 </head>
 <body>
